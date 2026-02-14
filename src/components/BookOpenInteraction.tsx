@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from 'react';
-import { motion, useAnimation, AnimatePresence, cubicBezier } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { motion, AnimatePresence, cubicBezier } from 'framer-motion';
+import { ArrowRight, BookOpen } from 'lucide-react';
 
 interface BookOpenInteractionProps {
   onComplete: () => void;
@@ -14,140 +14,118 @@ interface BookOpenInteractionProps {
 export default function BookOpenInteraction({ onComplete, coverImage, bookTitle, manuscriptContent }: BookOpenInteractionProps) {
   const [isBookOpen, setIsBookOpen] = useState(false);
   const [showManuscript, setShowManuscript] = useState(false);
-  const [isImmersed, setIsImmersed] = useState(false);
-
-  const bookControls = useAnimation();
-  const immerseControls = useAnimation();
-
-  const bookRef = useRef<HTMLDivElement>(null);
-
+  
   useEffect(() => {
     setIsBookOpen(false);
     setShowManuscript(false);
-    setIsImmersed(false);
   }, [coverImage]);
 
   const handleBookOpen = () => {
     if (isBookOpen) return;
     setIsBookOpen(true);
-    bookControls.start("open");
-
+    
     setTimeout(() => {
       setShowManuscript(true);
-    }, 800);
+    }, 600);
 
+    // Avanzar automáticamente después de un tiempo razonable para leer
     setTimeout(() => {
-      immerseControls.start("immerse").then(() => {
-        setIsImmersed(true);
-      });
-    }, 3000);
-  };
-
-  const handleContinue = () => {
-    if (isImmersed) {
       onComplete();
-    }
-  };
-
-  const variants = {
-    closed: { rotateY: 0 },
-    open: { rotateY: -170, transition: { duration: 1, ease: cubicBezier(0.42, 0, 0.58, 1) } }
-  };
-
-  const immerseVariants = {
-    initial: { scale: 1, opacity: 1 },
-    immerse: { scale: 1.5, opacity: 0, transition: { duration: 2, ease: cubicBezier(0.42, 0, 1, 1) } }
+    }, 5000);
   };
 
   return (
-    <motion.div 
-      ref={bookRef}
-      className="relative w-[280px] h-[350px] sm:w-[350px] sm:h-[450px] perspective-1000 cursor-pointer text-balance"
-      onClick={!isBookOpen ? handleBookOpen : isImmersed ? handleContinue : undefined}
-      whileHover={!isBookOpen ? { scale: 1.05 } : {}}
-      whileTap={!isBookOpen ? { scale: 0.95 } : {}}
-      variants={variants}
-      initial="closed"
-      animate={bookControls}
-    >
-      {/* Cubierta del libro */}
-      <motion.div
-        className="absolute inset-0 bg-gray-200 rounded-l-lg rounded-r-md shadow-lg transform-style-3d origin-[100%_50%]"
-        variants={{ closed: { rotateY: 0 }, open: { rotateY: -180, transition: { duration: 1.2, ease: cubicBezier(0.42, 0, 0.58, 1) } } }}
+    <div className="relative w-full h-full flex flex-col items-center justify-center py-4 sm:py-8 overflow-visible">
+      
+      {/* Contenedor del Libro con Perspectiva */}
+      <div 
+        className="relative w-[260px] h-[360px] sm:w-[320px] sm:h-[440px] perspective-2000 group shadow-2xl rounded-r-xl overflow-visible"
+        onClick={handleBookOpen}
       >
-        {/* Parte trasera de la cubierta (visible cuando el libro está abierto) */}
-        <div className="absolute inset-0 bg-gray-300 rounded-l-lg rounded-r-md backface-hidden flex items-center justify-center">
-          <span className="text-zinc-600 text-lg font-serif italic rotate-90">"La vida es un libro..."</span>
-        </div>
-        {/* Portada del libro */}
-        <div 
-          className="absolute inset-0 rounded-l-lg rounded-r-md overflow-hidden backface-hidden"
-          style={{ backgroundImage: `url(${coverImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-4">
-            <h2 className="text-white text-xl sm:text-2xl font-bold text-left w-full leading-tight">{bookTitle}</h2>
-          </div>
-        </div>
-      </motion.div>
-
-      {/* Lomo del libro */}
-
-      {/* Primera página del libro (Manuscritos) */}
-      <motion.div
-        className="absolute inset-0 bg-white rounded-r-md shadow-inner origin-[0%_50%] transform-style-3d z-[-1] flex flex-col justify-between p-6 sm:p-8 overflow-hidden"
-        variants={{ closed: { rotateY: 0 }, open: { rotateY: -175, transition: { duration: 1.2, ease: cubicBezier(0.42, 0, 0.58, 1), delay: 0.1 } } }}
-        animate={bookControls}
-      >
-        <div className="absolute inset-0 bg-white rounded-r-md backface-hidden" />
-        <div className="absolute inset-0 bg-gray-100 rounded-r-md transform rotateY-180 backface-hidden p-6 sm:p-8 text-zinc-800 font-serif overflow-y-auto custom-scrollbar">
+        
+        {/* Páginas interiores (Fijas debajo de la portada) */}
+        <div className="absolute inset-0 bg-stone-50 rounded-r-lg shadow-inner flex flex-col p-6 overflow-y-auto custom-scrollbar border-y border-r border-stone-200">
           <AnimatePresence>
             {showManuscript && (
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.8, ease: cubicBezier(0.42, 0, 0.58, 1) }}
-                className="text-lg sm:text-xl leading-relaxed italic"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+                className="text-stone-800 font-serif text-sm sm:text-base leading-relaxed"
               >
-                {manuscriptContent || (
-                  <p>
-                    "Hace tres años, comenzó un capítulo en nuestras vidas. Dos almas, un destino..."
-                    <br/><br/>
-                    "Cada página escrita con risas, sueños y un amor que crece sin cesar."
-                    <br/><br/>
-                    "Descubre cómo sigue esta historia..."
-                  </p>
-                )}
+                <div className="whitespace-pre-line italic">
+                  {manuscriptContent || "Cargando nuestra historia..."}
+                </div>
+                
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: [0, 1, 0.5] }}
+                  transition={{ delay: 2, duration: 1.5, repeat: Infinity, repeatType: "reverse" }}
+                  className="mt-8 flex items-center justify-center text-valentine-red font-sans text-xs uppercase tracking-widest font-bold"
+                >
+                  <span>Iniciando viaje mágico...</span>
+                </motion.div>
               </motion.div>
             )}
           </AnimatePresence>
         </div>
-      </motion.div>
 
+        {/* Portada del Libro (La que gira) */}
+        <motion.div
+          className="absolute inset-0 z-20 origin-left preserve-3d cursor-pointer"
+          initial={false}
+          animate={{ rotateY: isBookOpen ? -110 : 0 }}
+          transition={{ duration: 1.2, ease: cubicBezier(0.4, 0, 0.2, 1) }}
+          style={{ transformStyle: "preserve-3d" }}
+        >
+          {/* Frente de la Portada */}
+          <div 
+            className="absolute inset-0 backface-hidden rounded-r-xl shadow-2xl border-l-8 border-stone-800 flex flex-col overflow-hidden"
+            style={{ 
+              backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url(${coverImage})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
+          >
+            <div className="flex-grow p-6 flex flex-col justify-end">
+              <BookOpen className="text-white/40 w-12 h-12 mb-4" />
+              <h2 className="text-white text-2xl sm:text-3xl font-serif font-bold leading-tight drop-shadow-md">
+                {bookTitle}
+              </h2>
+              <div className="w-12 h-1 bg-valentine-pink mt-4 rounded-full" />
+            </div>
+            
+            {/* Lomo decorativo */}
+            <div className="absolute left-0 top-0 bottom-0 w-2 bg-black/20" />
+          </div>
 
-      {/* Indicador para deslizar/click */}
-      {!isBookOpen ? (
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.8, repeat: Infinity, repeatType: "reverse", type: "tween", ease: "linear" }}
-          className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 text-zinc-500 text-sm sm:text-base whitespace-nowrap flex items-center space-x-2"
-        >
-          <span>Click o desliza para abrir</span>
-          <ArrowRight className="w-4 h-4" />
+          {/* Reverso de la Portada (Interior) */}
+          <div 
+            className="absolute inset-0 backface-hidden rounded-l-xl bg-stone-100 border-stone-300 border-l"
+            style={{ transform: "rotateY(180deg)" }}
+          >
+            <div className="w-full h-full opacity-20 p-8 flex items-center justify-center">
+               <BookOpen className="w-32 h-32 text-stone-400" />
+            </div>
+          </div>
+
         </motion.div>
-      ) : isImmersed ? (
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.8, repeat: Infinity, repeatType: "reverse", type: "tween", ease: "linear" }}
-          className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 text-zinc-500 text-sm sm:text-base whitespace-nowrap flex items-center space-x-2 cursor-pointer"
-          onClick={handleContinue}
-        >
-          <span>Click para continuar</span>
-          <ArrowRight className="w-4 h-4" />
-        </motion.div>
-      ) : null}
-    </motion.div>
+
+        {/* Indicador Flotante */}
+        {!isBookOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 2 }}
+            className="absolute -bottom-12 left-1/2 -translate-x-1/2 text-white/60 font-sans text-xs sm:text-sm flex items-center space-x-2 animate-bounce pointer-events-none"
+          >
+            <ArrowRight className="w-4 h-4 rotate-180" />
+            <span>Toca para abrir nuestro libro</span>
+            <ArrowRight className="w-4 h-4" />
+          </motion.div>
+        )}
+
+      </div>
+    </div>
   );
 }

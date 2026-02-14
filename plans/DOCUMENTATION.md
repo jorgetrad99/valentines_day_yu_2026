@@ -9,7 +9,7 @@ Este proyecto es una experiencia web interactiva premium diseñada para conmemor
 -   **Estilos:** Tailwind CSS v4 (con paleta de colores personalizada: `valentine-pink`, `valentine-red`, `valentine-cream`, `zinc-950`)
 -   **Iconografía:** Lucide React y SVGs inline para ligereza
 -   **Datos:** JSON para la configuración dinámica de slides
--   **Reproductor de Música:** Spotify Embed Widget
+-   **Reproductor de Música:** Audio local (HTML5 `<audio>`) con soporte para autoplay y controles de usuario
 
 ## Arquitectura: Motor de Presentación Basado en Datos
 La presentación se construye dinámicamente a partir del archivo [`src/data/presentationData.json`](src/data/presentationData.json), permitiendo una fácil personalización y extensión.
@@ -56,9 +56,10 @@ Cada objeto en el array `slides` representa una pantalla o interacción:
 -   **Mensajes Mágicos:** Pequeñas notas de amor flotan en el fondo y se revelan en el hover de cada imagen.
 
 ### 5. [`MusicPlayer.tsx`](src/components/MusicPlayer.tsx)
--   **Función:** Reproductor de música integrado (Spotify Embed Widget) discreto.
--   **Diseño:** Botones de música/cerrar y mute con animaciones de hover/tap. El reproductor se despliega en un contenedor "glassmorphism" estilizado.
--   **Compatibilidad:** Utiliza el embed de Spotify, con una nota de usuario sobre posibles bloqueos de CSP en entornos locales si no se ha iniciado sesión en el navegador.
+-   **Función:** Reproductor de música local integrado y discreto.
+-   **Diseño:** Botones de música, mute, play/pause con animaciones de hover/tap. El reproductor se despliega en un contenedor "glassmorphism" estilizado.
+-   **Compatibilidad:** Utiliza un archivo MP3 local almacenado en `public/music/background-track.mp3`.
+-   **Autoplay:** Implementa lógica de reproducción automática con fallback de interacción del usuario (requerido por políticas de navegadores modernos).
 
 ## Configuración de Responsividad Global
 -   **Mobile-First:** Todos los estilos y componentes han sido diseñados pensando primero en dispositivos móviles y luego escalando a tablets y desktops.
@@ -76,7 +77,7 @@ Cada objeto en el array `slides` representa una pantalla o interacción:
 ## Futuras Consideraciones
 -   **Personalización Avanzada:** Permitir la edición de `presentationData.json` directamente desde una interfaz de usuario simple (requeriría un servidor backend).
 -   **Más Interacciones:** Añadir nuevos tipos de interacciones (`interactionType`) a los slides.
--   **Control de Audio Global:** Implementar controles más finos sobre la reproducción de Spotify (shuffle real, control de volumen programático, etc.), lo cual podría requerir integración con la API de Spotify (OAuth).
+-   **Control de Audio Global:** El reproductor actual ya permite control de volumen (mute) y reproducción programática.
 -   **Pre-carga de Imágenes:** Implementar una estrategia de pre-carga más agresiva para las imágenes del collage si la presentación se hace muy larga.
 
 Este documento proporciona una visión completa del proyecto y te servirá como base sólida para cualquier trabajo futuro. ¡Que disfrutes de la experiencia mágica! ✨
