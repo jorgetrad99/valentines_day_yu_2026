@@ -8,6 +8,10 @@ interface CollageProps {
 }
 
 export default function Collage({ images = [] }: CollageProps) {
+  const isVideo = (url: string) => {
+    return url.match(/\.(mp4|webm|ogg|mov)$/i) || url.includes('video');
+  };
+
   const isSingleImage = images.length === 1;
   const isTwoImages = images.length === 2;
   const isThreeImages = images.length === 3;
@@ -89,12 +93,23 @@ export default function Collage({ images = [] }: CollageProps) {
               whileTap={{ scale: 0.95 }}
               className="relative rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white/5 bg-zinc-900 group w-full h-full"
             >
-              <img
-                src={src}
-                alt={`Recuerdo ${i}`}
-                className="w-full h-full object-contain select-none transition-all duration-700"
-                loading="lazy"
-              />
+              {isVideo(src) ? (
+                <video
+                  src={src}
+                  className="w-full h-full object-contain"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                />
+              ) : (
+                <img
+                  src={src}
+                  alt={`Recuerdo ${i}`}
+                  className="w-full h-full object-contain select-none transition-all duration-700"
+                  loading="lazy"
+                />
+              )}
               <div className="absolute inset-0 bg-gradient-to-t from-valentine-red/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center p-6">
                 <span className="text-white font-bold text-lg drop-shadow-lg text-center leading-tight">
                   {loveNotes[randomNoteIndices[i]]}

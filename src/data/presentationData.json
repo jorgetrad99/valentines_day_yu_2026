@@ -16,7 +16,7 @@
       "id": "first-meeting",
       "type": "image-collage",
       "title": "La primera vez que te vi",
-      "subtitle": "En este dia me diste la oportunidad de por fin, lugo de años de espera, cononcer a la persona más cute del mundo. No tenía claro cómo saldría nuestra cita, pero estaba emocionado :3 Así estabas con comida, como siempre...",
+      "subtitle": "En este dia me diste la oportunidad de por fin, luego de años de espera, cononcer a la persona más cute del mundo. No tenía claro cómo saldría nuestra cita, pero estaba emocionado :3 Así estabas con comida, como siempre...",
       "background": "bg-zinc-950",
       "images": ["https://raptor.develancoders.com/api/assets/422f063c-595d-48e5-a780-f5b8eda3e7d0/thumbnail?key=vhyHzJmK2vvPQAUceuREkfOUqs-XXWnF67hDhbhLTDJoMGHgT1S9n6MK1FPBdwXlMwQ&size=preview&c=4%2FcJDQT3aaaGaHmWeHdolhBxenf4&edited=true"],
       "requiresInteraction": false
@@ -52,8 +52,8 @@
       "id": "beach-kiss",
       "type": "image-collage",
       "title": "Nuestro primer beso en la playa",
-      "subtitle": "El sonido de las olas y el sabor a sal. Un momento congelado en el tiempo.",
-      "images": ["/api/placeholder/600/400"],
+      "subtitle": "Que lindo fue disfrutar de ese dia, con el agua perfecta, sol rico, musica y mi amorcito :3",
+      "images": ["https://raptor.develancoders.com/api/assets/594a1b7f-3ab2-4e0e-b963-17fa052cbd77/thumbnail?key=lYlCmRWP3ifo5cVhAdxX3hf3XmNUM59yIE3gOwTZAlsgZWf34xcoYf93r3Z4z8yQ8qY&size=preview&c=49YJPQhVm59ruFg4iHV3l3lwlgdn&edited=true", "https://raptor.develancoders.com/api/assets/fc2d54ee-6aa4-4930-b404-e09dfe0f4e5e/thumbnail?key=M8LwEnGRm1aVjJdk--t-LpUs_NkPySGexAf2DZjXREdLQbkmyaDAm1c70I8Bxv3CgsY&size=preview&c=JecFHQaIZj2H95h3Vpl3iGVwawWp&edited=true"],
       "background": "bg-zinc-950",
       "requiresInteraction": false
     },
@@ -61,33 +61,37 @@
       "id": "graduation",
       "type": "image-collage",
       "title": "Tu graduación",
-      "subtitle": "Verte alcanzar tus metas es uno de mis orgullos más grandes. Siempre estaré en primera fila para aplaudirte.",
+      "subtitle": "Verte alcanzar tus metas y que quieras seguir mejorando siempre me llena de orgullo.",
       "background": "bg-zinc-950",
+      "images": ["https://raptor.develancoders.com/api/assets/937c20db-2302-43db-afec-cfae53f91d85/thumbnail?key=JVw2SRsjZcCwqJJujNVuNTIhL9mv1UAHNFpNfKRV-3ojLiSveGF8QPvwxcGGIg6nwGM&size=preview&c=1RcKFYaIdHZgaYdEqXd2qJyxXwjX&edited=true"],
       "requiresInteraction": false
     },
     {
       "id": "music-collaboration",
       "type": "image-collage",
-      "title": "Nuestra melodía",
-      "subtitle": "Cuando me ayudaste a tocar esas 2 canciones... no solo eran notas, era nuestra armonía trabajando junta.",
+      "title": "Tu apoyo en mis proyectos",
+      "subtitle": "Cuando me ayudaste a sacar esas 2 canciones... y valer chorizo pero juntes :3",
       "background": "bg-zinc-950",
+      "images": ["https://raptor.develancoders.com/api/assets/b294a387-4eed-4678-9ab1-78f218174cbc/video/playback?key=oi-EVfbTBI5rS6uQHO4VuOUhDcJjOuX3cJceRuMSUVDBHVW8fo_c62pWZa-rFw2Hakg&c=HAgOFAKE%2BYZoaHmHaIeAMgcHUg%3D%3D", "https://raptor.develancoders.com/api/assets/5202c9ba-b3eb-43f6-8975-f0654d4787d8/video/playback?key=Lc2i_Qury_i9bOUqShouoK2nMpPwhC4pa1huMLCYupxTKahyH50sjig0r9L134YeETc&c=YBgKJIZFdoZfdZh5h4msgNgJiA%3D%3D"],
       "requiresInteraction": false
     },
     
     {
       "id": "taco-nights",
       "type": "image-collage",
-      "title": "Tacos y risas",
-      "subtitle": "Nuestras cenas de tacos, nuestras caminatas sin rumbo y esas salidas espontáneas que terminan siendo las mejores.",
+      "title": "Tacos",
+      "subtitle": "Comer tacos y presumirte que en Xalapa son mejores y valen 15 varos la orden",
       "background": "bg-zinc-950",
+      "images": ["https://raptor.develancoders.com/api/assets/a3e40bf2-0df9-402e-8f80-0d9786dc15e3/thumbnail?key=4xN7c46NZzM8Q1U8GC_kwojx-BkmGMe6VdpcvG5wmfo7zvEqBLI194oytJb0JcfIU7Q&size=preview&c=Y%2FgJFQTkd7x79FiFeIZ4dmhwigaX&edited=true", "https://raptor.develancoders.com/api/assets/7e49306e-0fa3-4171-9c83-33fce7d3b915/thumbnail?key=wyB8zjuC1rk6icvJCAaLuap2LZSpefF1NImZz3EsAbskroVChA16_CbLcFaHhWYZxtc&size=preview&c=XQgSDQCCpWB3SaiIiIh3dyxAa2SP&edited=true", "https://raptor.develancoders.com/api/assets/e7019132-4045-4e08-ae95-10937cd4f4dd/thumbnail?key=8zY-utYLHJ7MA3m5ZdqEK8w5i4xHS1klwYDkuB4HEh127COJv_6URdUx3oqXHtp7nLY&size=preview&c=HwgODQKglTBoR6eJiXhYlwd6phCJ&edited=true"],
       "requiresInteraction": false
     },
     {
-      "id": "support",
+      "id": "crazyness",
       "type": "image-collage",
-      "title": "Mi mayor fan",
+      "title": "Tu locura me hace feli :3",
       "subtitle": "Gracias por celebrar cada una de mis presentaciones, por sencillas que sean. Tu apoyo es mi motor.",
       "background": "bg-zinc-950",
+      "images": ["https://raptor.develancoders.com/api/assets/35deb7a2-5c1d-458a-b4b1-5564c47b0ae8/video/playback?key=DmjX6ClKRhExhVW-xojz8R_q_hT6NoboelSDGWkSKTg__fGIAEztb8P1zvlk2AipSrM&c=pfcJFIRGmnfPRXdcqUcNgbgBiA%3D%3D", "https://raptor.develancoders.com/api/assets/d8652fa9-9257-420e-88bf-b7a79f702e25/thumbnail?key=xhjuC7bM5rTMj1FLZ1ifmfVugTiSFN_3mwPqCrLXdNqBpir6YVNqj4LQzQGwofPVKvM&size=preview&c=WxgKDQKpyK95iKeHVYeZeXXzElAv&edited=true"],
       "requiresInteraction": false
     },
     {
@@ -119,16 +123,17 @@
       "id": "final-connection",
       "type": "interaction",
       "interactionType": "HandsSnap",
-      "title": "Para siempre",
-      "subtitle": "Tres años después, mis brazos siguen siendo tu refugio y los tuyos los míos.",
+      "title": "Mano",
+      "subtitle": "Dame la mano y vamo' a vivir bonito",
       "background": "bg-zinc-950",
       "requiresInteraction": true
     },
     {
       "id": "ending",
       "type": "final",
-      "title": "Feliz San Valentín",
+      "title": "Sigamos creando recuerdo bonitos juntos!",
       "subtitle": "Te amo mucho amorcito, feliz San Valentín.",
+      "images": ["https://raptor.develancoders.com/api/assets/bdb942b5-6f1f-4c89-8ac9-dfd6df165b27/video/playback?key=aCqUdLkJo6lO3dpfePJ-5xrIw8ADsx6Kaw-qqBbvZzLpHecg82q7kBuDURsZXUKV6v0&c=2SgKHIaxZocgppXJqmaHoFQHeg%3D%3D"],
       "background": "bg-zinc-950",
       "requiresInteraction": false
     }
