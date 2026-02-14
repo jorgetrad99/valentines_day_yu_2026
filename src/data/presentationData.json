@@ -4,7 +4,7 @@
       "id": "intro",
       "type": "interaction",
       "interactionType": "BookOpen",
-      "title": "Un San Valentín juntos más",
+      "title": "Un San Valentín más juntos",
       "subtitle": "Junto a mi amorcito :3",
       "background": "bg-zinc-950",
       "requiresInteraction": true,
@@ -16,7 +16,7 @@
       "id": "first-meeting",
       "type": "image-collage",
       "title": "La primera vez que te vi",
-      "subtitle": "En este dia me diste la oportunidad de por fin, lugo de años de espera, cononcer a la persona más cute del mundo. No tenía claro cómo saldría nuestra cita, pero estaba emocionado :3 Así estabas con comida como siempre...",
+      "subtitle": "En este dia me diste la oportunidad de por fin, lugo de años de espera, cononcer a la persona más cute del mundo. No tenía claro cómo saldría nuestra cita, pero estaba emocionado :3 Así estabas con comida, como siempre...",
       "background": "bg-zinc-950",
       "images": ["https://raptor.develancoders.com/api/assets/422f063c-595d-48e5-a780-f5b8eda3e7d0/thumbnail?key=vhyHzJmK2vvPQAUceuREkfOUqs-XXWnF67hDhbhLTDJoMGHgT1S9n6MK1FPBdwXlMwQ&size=preview&c=4%2FcJDQT3aaaGaHmWeHdolhBxenf4&edited=true"],
       "requiresInteraction": false
@@ -24,17 +24,18 @@
     {
       "id": "dq-date",
       "type": "image-collage",
-      "title": "Citas sencillas, amor complejo",
-      "subtitle": "Desde un helado de Dairy Queen hasta una marquesita celebrando el cumple del Bicho (CR7). Lo de menos es el lugar, lo de más eres tú.",
+      "title": "Nuestras citas espontaneas y sencillas",
+      "subtitle": "Desde tu Dairy hasta tu marquesita celebrando el cumple del Bicho (CR7). Siempre que salimos sé que alguna bobada vamos a precenciar, de ti, de mí o del mundo xD Siiiiuuuuuu",
       "background": "bg-zinc-950",
-      "images": ["https://raptor.develancoders.com/api/assets/59dee9bf-02f3-443e-b542-045ced554c55/thumbnail?key=jhxOtC-8sHUb69vBQvXHhKJlwyMcSWgETDAklde6eowIWQktSIv6XJaklxUUBapDSgg&size=preview&c=HwgOFQLGZm%2BWiIiIiZd2h5AaJsZQ&edited=true"],
+      "images": ["https://raptor.develancoders.com/api/assets/59dee9bf-02f3-443e-b542-045ced554c55/thumbnail?key=jhxOtC-8sHUb69vBQvXHhKJlwyMcSWgETDAklde6eowIWQktSIv6XJaklxUUBapDSgg&size=preview&c=HwgOFQLGZm%2BWiIiIiZd2h5AaJsZQ&edited=true", "https://raptor.develancoders.com/api/assets/ca09a42f-d1c6-4b54-b9d0-8354c71300a9/thumbnail?key=sBA9PwtK-ujmMol7CnWxxQNHZWJW_GDg4yDfVaHD1PmUlziDXUANbq9wWbOEgrkDcug&size=preview&c=TxgKFQJuiIB1WYe4ukSmeE2PpfRJ&edited=true", "https://raptor.develancoders.com/api/assets/836bb2e2-f657-4b33-96b0-fd1806f75909/thumbnail?key=zuvmONeEZLWMpeSD0xQZGW1zJFi0GXBy3sjAZgHt9vBB5ApN1nnCeT_brJZEGb4dyt4&size=preview&c=WwgKDQKHeWF6yZdYh4B1WGiUUFUH&edited=true", "https://raptor.develancoders.com/api/assets/64110976-a0d0-4fd8-90e4-38330703e5b8/thumbnail?key=PqD-XuRpijdt1A18CU6-JH34ufWGe59h3ZgYUvDWpASSW0iN3MIEJbYg-SRBVboSxXM&size=preview&c=UAgOBYCApmh4l2eIloeHhUAvKeDj&edited=true", "https://raptor.develancoders.com/api/assets/cc60e6b6-b254-494d-bc35-97b07fd834f2/thumbnail?key=NAZ5nFNU95z3q0_9q2Rn0Of_wXBqdJh2J3e5_klr_F1h6IRa1BusETqSOET6JGiXn0s&size=preview&c=TxgOFQKLmHiHB3WoeHloh3epQJYK&edited=true", "https://raptor.develancoders.com/api/assets/33de6307-c7fa-455a-8601-8c5ec01924e9/thumbnail?key=jqH15bP_NjAD9Zs5HQgwmktdachwWYpj8mqjAfZEqZr_r2FMs_VuYr_rEcUO6NRcW_8&size=preview&c=VQgKFQJ0d5CHeWhItXaJeM9e9M5G&edited=true"],
       "requiresInteraction": false
     },
     {
       "id": "will-you-be-mine",
       "type": "image-collage",
       "title": "Cuando te pedí ser mi novia",
-      "subtitle": "Los nervios a flor de piel y la respuesta que me hizo el hombre más feliz del mundo.",
+      "subtitle": "Ese día quise replicar nuestra primera cita que fue ir por tu marquesita a la alemán y luego bobear en el parque hundido.",
+      "images": ["https://raptor.develancoders.com/api/assets/d3eaaeb6-1fa2-4e13-acf0-b2e881444ac1/thumbnail?key=PfWtJjtOOw8PkEfFwW_9IfWD3A0y_EXKmZ4Em0-iZ_4qvHejm5Olc94fv56hCoCOYFQ&size=preview&c=TggGDQBGddA3NndGpVaIeFDE2JB5&edited=true", "https://raptor.develancoders.com/api/assets/b9561a53-1657-44be-bb8d-bed9aa205df1/thumbnail?key=gUB1sHWcH64ElzAMDXM_g00jc_tg_KvnU_aMGCm4NCV6Svpn3Ld3yjsMMlefEYHHIs8&size=preview&c=kRgKDQLXiMiJV4kKh3dYZ9DNuuev&edited=true"],
       "background": "bg-zinc-950",
       "requiresInteraction": false
     },
@@ -42,8 +43,9 @@
       "id": "reciprocal-love",
       "type": "image-collage",
       "title": "Cuando tú me lo pediste a mí",
-      "subtitle": "Un gesto que me demostró que esto era mutuo, genuino y real. Dos almas eligiéndose.",
+      "subtitle": "En ese momento me enamoraste aún, me dije a mí mismo: mímismo, sí se la voló. La amo <3",
       "background": "bg-zinc-950",
+      "images": ["https://raptor.develancoders.com/api/assets/57229397-a719-48b5-b25d-e457d1fb1fc7/thumbnail?key=QfloWbg9LFZk76f0a2IaMvqSdo3Mkhtdr84bGs4Ng0272Eo1t0ssLcV09BNdYlOzA98&size=preview&c=VxgKFQQFdYGKWIh6mHmXeEeCgCQI&edited=true", "https://raptor.develancoders.com/api/assets/6bbd4a28-42ac-493a-a644-1a4f12264c26/thumbnail?key=RrrB2ygvcEutuJ-XjLcxVGG5wEqB5zd1kVoAZ0LdEMy_ARM5agJgfljqV5pUP3B7tL0&size=preview&c=VhgKFQQ2eJB8WIaYmXqZh1h0kEUH&edited=true"],
       "requiresInteraction": false
     },
     {

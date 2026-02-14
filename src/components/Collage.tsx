@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 
 interface CollageProps {
@@ -37,12 +37,23 @@ export default function Collage({ images = [] }: CollageProps) {
 
   const loveNotes = [
     "Tu sonrisa ✨",
+    "Tu voluntad 💪",
+    "Tu inteligencia 🧠",
+    "Tu corazón bonito ❤️",
+    "Tu sentido del humor 😂",
+    "Tu forma de ser única 🌟",
+    "Tu guapura 😍",
     "Tu apoyo 💖",
     "Tu locura 😜",
-    "Tu ternura 🧸",
-    "Nuestras risas 😂",
-    "Todo de ti 😍"
+    "Tu nivel de cuteness 🧸",
+    "Tus bobadas 😂",
+    "Toda tú 😍"
   ];
+
+  // Generate a stable random index for each image when the images array changes
+  const randomNoteIndices = useMemo(() => {
+    return images.map(() => Math.floor(Math.random() * loveNotes.length));
+  }, [images]);
 
   return (
     <motion.div
@@ -86,7 +97,7 @@ export default function Collage({ images = [] }: CollageProps) {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-valentine-red/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center p-6">
                 <span className="text-white font-bold text-lg drop-shadow-lg text-center leading-tight">
-                  {loveNotes[i % loveNotes.length]}
+                  {loveNotes[randomNoteIndices[i]]}
                 </span>
               </div>
             </motion.div>
