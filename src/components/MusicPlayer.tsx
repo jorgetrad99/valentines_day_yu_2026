@@ -8,11 +8,7 @@ export default function MusicPlayer() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
 
-  // ID de la playlist de Spotify
-  const spotifyPlaylistId = "2qM0VeAXgwS4O9cM0qnQoL"; 
-  // Nota técnica: Spotify no permite 'shuffle' directamente vía URL de embed de forma oficial garantizada, 
-  // pero podemos añadir parámetros que ayudan a la experiencia de visualización.
-  const embedUrl = `https://open.spotify.com/embed/playlist/${spotifyPlaylistId}?utm_source=generator&theme=0`;
+  const embedUrl = `https://open.spotify.com/track/1HNkqx9Ahdgi1Ixy2xkKkL?si=1fc4dd1f315e4a8b`;
 
   return (
     <div className="fixed bottom-6 right-6 z-[100]">

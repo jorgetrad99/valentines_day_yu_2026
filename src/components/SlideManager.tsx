@@ -10,6 +10,7 @@ import HeartRepair from '@/components/HeartRepair';
 import HandsSnap from '@/components/HandsSnap';
 import Collage from '@/components/Collage';
 import MusicPlayer from '@/components/MusicPlayer';
+import BookOpenInteraction from '@/components/BookOpenInteraction'; // Importar el nuevo componente
 
 // --- Types ---
 type SlideType = 'cover' | 'text-only' | 'image-collage' | 'interaction' | 'final';
@@ -20,9 +21,12 @@ interface Slide {
   title: string;
   subtitle?: string;
   images?: string[];
-  interactionType?: string;
+  interactionType?: 'HeartRepair' | 'HandsSnap' | 'BookOpen';
   requiresInteraction: boolean;
   background?: string;
+  coverImage?: string;
+  bookTitle?: string;
+  manuscriptContent?: string; // Añadido para el contenido del libro
 }
 
 // --- Main SlideManager Component ---
@@ -82,6 +86,8 @@ export default function SlideManager() {
 
   const markInteractionComplete = () => {
     setInteractionStates(prev => ({ ...prev, [currentStep]: true }));
+    // El componente de interacción ahora maneja su propia transición y llama a onComplete
+    handleNext();
   };
 
   const slideVariants = {
@@ -144,7 +150,7 @@ export default function SlideManager() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.5 }}
-                  className="text-xl sm:text-2xl md:text-3xl text-zinc-600 font-sans max-w-3xl mx-auto italic font-light text-balance"
+                  className="text-xl sm:text-2xl md:text-3xl text-zinc-600 font-sans max-w-3xl mx-auto italic font-light text-balance break-words"
                 >
                   {currentSlide.subtitle}
                 </motion.p>
@@ -164,6 +170,9 @@ export default function SlideManager() {
                   )}
                   {currentSlide.interactionType === 'HandsSnap' && (
                     <HandsSnap onComplete={markInteractionComplete} />
+                  )}
+                  {currentSlide.interactionType === 'BookOpen' && currentSlide.coverImage && currentSlide.bookTitle && (
+                    <BookOpenInteraction onComplete={markInteractionComplete} coverImage={currentSlide.coverImage} bookTitle={currentSlide.bookTitle} manuscriptContent={currentSlide.manuscriptContent} />
                   )}
                 </div>
               )}

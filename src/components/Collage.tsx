@@ -24,7 +24,7 @@ export default function Collage({ images = [] }: CollageProps) {
       opacity: 1,
       scale: 1,
       rotate: 0,
-      transition: {
+      transition: { // Explicitly define transition properties
         type: "spring",
         stiffness: 80,
         damping: 12,
