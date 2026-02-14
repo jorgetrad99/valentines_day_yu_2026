@@ -161,15 +161,15 @@ export default function SlideManager() {
 
             {/* Content section that fills the remaining space */}
             <div className="w-full h-full flex items-center justify-center overflow-hidden">
-              {currentSlide.type === 'image-collage' && (
+              {currentSlide?.type === 'image-collage' && currentSlide.images && (
                 <Collage images={currentSlide.images} />
               )}
 
-              {currentSlide.type === 'love-notes' && (
+              {currentSlide?.type === 'love-notes' && (
                 <LoveNotesExplosion />
               )}
               
-              {currentSlide.type === 'interaction' && (
+              {currentSlide?.type === 'interaction' && (
                 <div className="w-full max-w-md md:max-w-lg">
                   {currentSlide.interactionType === 'HeartRepair' && (
                     <HeartRepair onComplete={markInteractionComplete} />
