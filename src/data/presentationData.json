@@ -1,0 +1,129 @@
+{
+  "slides": [
+    {
+      "id": "intro",
+      "type": "cover",
+      "title": "Nuestra Historia en 3 Años",
+      "subtitle": "Un viaje por cada momento que nos ha hecho ser quienes somos hoy.",
+      "background": "bg-zinc-950",
+      "requiresInteraction": false
+    },
+    {
+      "id": "first-meeting",
+      "type": "text-only",
+      "title": "La primera vez que te vi",
+      "subtitle": "Ese instante en el que el mundo se detuvo. No sabía que estaba viendo a la persona que cambiaría mi vida para siempre.",
+      "background": "bg-zinc-950",
+      "requiresInteraction": false
+    },
+    {
+      "id": "dq-date",
+      "type": "image-collage",
+      "title": "Citas sencillas, amor complejo",
+      "subtitle": "Desde un helado de Dairy Queen hasta una marquesita celebrando el cumple del Bicho (CR7). Lo de menos es el lugar, lo de más eres tú.",
+      "background": "bg-zinc-950",
+      "images": ["https://raptor.develancoders.com/people/8839d963-a465-4a1c-a0bd-00f712ba49aa/photos/64110976-a0d0-4fd8-90e4-38330703e5b8"],
+      "requiresInteraction": false
+    },
+    {
+      "id": "will-you-be-mine",
+      "type": "text-only",
+      "title": "Cuando te pedí ser mi novia",
+      "subtitle": "Los nervios a flor de piel y la respuesta que me hizo el hombre más feliz del mundo.",
+      "background": "bg-zinc-950",
+      "requiresInteraction": false
+    },
+    {
+      "id": "reciprocal-love",
+      "type": "text-only",
+      "title": "Cuando tú me lo pediste a mí",
+      "subtitle": "Un gesto que me demostró que esto era mutuo, genuino y real. Dos almas eligiéndose.",
+      "background": "bg-zinc-950",
+      "requiresInteraction": false
+    },
+    {
+      "id": "beach-kiss",
+      "type": "image-collage",
+      "title": "Nuestro primer beso en la playa",
+      "subtitle": "El sonido de las olas y el sabor a sal. Un momento congelado en el tiempo.",
+      "images": ["/api/placeholder/600/400"],
+      "background": "bg-zinc-950",
+      "requiresInteraction": false
+    },
+    {
+      "id": "graduation",
+      "type": "text-only",
+      "title": "Tu graduación",
+      "subtitle": "Verte alcanzar tus metas es uno de mis orgullos más grandes. Siempre estaré en primera fila para aplaudirte.",
+      "background": "bg-zinc-950",
+      "requiresInteraction": false
+    },
+    {
+      "id": "music-collaboration",
+      "type": "text-only",
+      "title": "Nuestra melodía",
+      "subtitle": "Cuando me ayudaste a tocar esas 2 canciones... no solo eran notas, era nuestra armonía trabajando junta.",
+      "background": "bg-zinc-950",
+      "requiresInteraction": false
+    },
+    
+    {
+      "id": "taco-nights",
+      "type": "text-only",
+      "title": "Tacos y risas",
+      "subtitle": "Nuestras cenas de tacos, nuestras caminatas sin rumbo y esas salidas espontáneas que terminan siendo las mejores.",
+      "background": "bg-zinc-950",
+      "requiresInteraction": false
+    },
+    {
+      "id": "support",
+      "type": "text-only",
+      "title": "Mi mayor fan",
+      "subtitle": "Gracias por celebrar cada una de mis presentaciones, por sencillas que sean. Tu apoyo es mi motor.",
+      "background": "bg-zinc-950",
+      "requiresInteraction": false
+    },
+    {
+      "id": "the-clash",
+      "type": "interaction",
+      "interactionType": "HeartRepair",
+      "title": "Incluso cuando nos enojamos",
+      "subtitle": "Hemos tenido altibajos, pero cada roce nos ha enseñado a sanar y a entender que nos hacemos bien.",
+      "background": "bg-zinc-950",
+      "requiresInteraction": true
+    },
+    {
+      "id": "why-i-love-you",
+      "type": "image-collage",
+      "title": "Por esto te amo...",
+      "subtitle": "Por tu sonrisa, por tu fuerza, por cómo me cuidas y por la magia que traes a mi vida cada día.",
+      "images": [
+        "/api/placeholder/400/300",
+        "/api/placeholder/400/400",
+        "/api/placeholder/300/400",
+        "/api/placeholder/400/320",
+        "/api/placeholder/350/350",
+        "/api/placeholder/450/300"
+      ],
+      "background": "bg-zinc-950",
+      "requiresInteraction": false
+    },
+    {
+      "id": "final-connection",
+      "type": "interaction",
+      "interactionType": "HandsSnap",
+      "title": "Para siempre",
+      "subtitle": "Tres años después, mis brazos siguen siendo tu refugio y los tuyos los míos.",
+      "background": "bg-zinc-950",
+      "requiresInteraction": true
+    },
+    {
+      "id": "ending",
+      "type": "final",
+      "title": "Feliz San Valentín",
+      "subtitle": "Te amo más de lo que las palabras pueden expresar.",
+      "background": "bg-zinc-950",
+      "requiresInteraction": false
+    }
+  ]
+}
