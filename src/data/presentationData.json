@@ -98,24 +98,16 @@
       "id": "the-clash",
       "type": "interaction",
       "interactionType": "HeartRepair",
-      "title": "Incluso cuando nos enojamos",
-      "subtitle": "Hemos tenido altibajos, pero cada roce nos ha enseñado a sanar y a entender que nos hacemos bien.",
+      "title": "Gracias por ser mi lugar seguro",
+      "subtitle": "Cuando estoy bajoneado siempre me ayudas a dejar de estarlo. Me haces mucho bien <3",
       "background": "bg-zinc-950",
       "requiresInteraction": true
     },
     {
       "id": "why-i-love-you",
-      "type": "image-collage",
-      "title": "Por esto te amo...",
-      "subtitle": "Por tu sonrisa, por tu fuerza, por cómo me cuidas y por la magia que traes a mi vida cada día.",
-      "images": [
-        "/api/placeholder/400/300",
-        "/api/placeholder/400/400",
-        "/api/placeholder/300/400",
-        "/api/placeholder/400/320",
-        "/api/placeholder/350/350",
-        "/api/placeholder/450/300"
-      ],
+      "type": "love-notes",
+      "title": "Y ya, e toro ... Por esto te amo.",
+      "subtitle": "",
       "background": "bg-zinc-950",
       "requiresInteraction": false
     },

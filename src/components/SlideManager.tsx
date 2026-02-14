@@ -11,9 +11,10 @@ import HandsSnap from '@/components/HandsSnap';
 import Collage from '@/components/Collage';
 import MusicPlayer from '@/components/MusicPlayer';
 import BookOpenInteraction from '@/components/BookOpenInteraction'; // Importar el nuevo componente
+import LoveNotesExplosion from '@/components/LoveNotesExplosion';
 
 // --- Types ---
-type SlideType = 'cover' | 'text-only' | 'image-collage' | 'interaction' | 'final';
+type SlideType = 'cover' | 'text-only' | 'image-collage' | 'interaction' | 'final' | 'love-notes';
 
 interface Slide {
   id: string;
@@ -162,6 +163,10 @@ export default function SlideManager() {
             <div className="w-full h-full flex items-center justify-center overflow-hidden">
               {currentSlide.type === 'image-collage' && (
                 <Collage images={currentSlide.images} />
+              )}
+
+              {currentSlide.type === 'love-notes' && (
+                <LoveNotesExplosion />
               )}
               
               {currentSlide.type === 'interaction' && (
