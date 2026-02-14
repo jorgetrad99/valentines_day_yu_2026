@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from 'react';
-import { motion, useAnimation, AnimatePresence } from 'framer-motion';
+import { motion, useAnimation, AnimatePresence, cubicBezier } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
 interface BookOpenInteractionProps {
@@ -51,12 +51,12 @@ export default function BookOpenInteraction({ onComplete, coverImage, bookTitle,
 
   const variants = {
     closed: { rotateY: 0 },
-    open: { rotateY: -170, transition: { type: "tween", duration: 1, ease: "easeInOut" } }
+    open: { rotateY: -170, transition: { duration: 1, ease: cubicBezier(0.42, 0, 0.58, 1) } }
   };
 
   const immerseVariants = {
     initial: { scale: 1, opacity: 1 },
-    immerse: { scale: 1.5, opacity: 0, transition: { type: "tween", duration: 2, ease: "easeIn" } }
+    immerse: { scale: 1.5, opacity: 0, transition: { duration: 2, ease: cubicBezier(0.42, 0, 1, 1) } }
   };
 
   return (
@@ -73,7 +73,7 @@ export default function BookOpenInteraction({ onComplete, coverImage, bookTitle,
       {/* Cubierta del libro */}
       <motion.div
         className="absolute inset-0 bg-gray-200 rounded-l-lg rounded-r-md shadow-lg transform-style-3d origin-[100%_50%]"
-        variants={{ closed: { rotateY: 0 }, open: { rotateY: -180, transition: { type: "tween", duration: 1.2, ease: "easeInOut" } } }}
+        variants={{ closed: { rotateY: 0 }, open: { rotateY: -180, transition: { duration: 1.2, ease: cubicBezier(0.42, 0, 0.58, 1) } } }}
       >
         {/* Parte trasera de la cubierta (visible cuando el libro está abierto) */}
         <div className="absolute inset-0 bg-gray-300 rounded-l-lg rounded-r-md backface-hidden flex items-center justify-center">
@@ -95,7 +95,7 @@ export default function BookOpenInteraction({ onComplete, coverImage, bookTitle,
       {/* Primera página del libro (Manuscritos) */}
       <motion.div
         className="absolute inset-0 bg-white rounded-r-md shadow-inner origin-[0%_50%] transform-style-3d z-[-1] flex flex-col justify-between p-6 sm:p-8 overflow-hidden"
-        variants={{ closed: { rotateY: 0 }, open: { rotateY: -175, transition: { type: "tween", duration: 1.2, ease: "easeInOut", delay: 0.1 } } }}
+        variants={{ closed: { rotateY: 0 }, open: { rotateY: -175, transition: { duration: 1.2, ease: cubicBezier(0.42, 0, 0.58, 1), delay: 0.1 } } }}
         animate={bookControls}
       >
         <div className="absolute inset-0 bg-white rounded-r-md backface-hidden" />
@@ -106,7 +106,7 @@ export default function BookOpenInteraction({ onComplete, coverImage, bookTitle,
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.8, type: "tween", ease: "easeInOut" }}
+                transition={{ duration: 0.8, ease: cubicBezier(0.42, 0, 0.58, 1) }}
                 className="text-lg sm:text-xl leading-relaxed italic"
               >
                 {manuscriptContent || (
@@ -130,7 +130,7 @@ export default function BookOpenInteraction({ onComplete, coverImage, bookTitle,
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.8, repeat: Infinity, repeatType: "reverse", type: "tween", ease: "easeInOut" }}
+          transition={{ delay: 0.5, duration: 0.8, repeat: Infinity, repeatType: "reverse", type: "tween", ease: "linear" }}
           className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 text-zinc-500 text-sm sm:text-base whitespace-nowrap flex items-center space-x-2"
         >
           <span>Click o desliza para abrir</span>
@@ -140,7 +140,7 @@ export default function BookOpenInteraction({ onComplete, coverImage, bookTitle,
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.8, repeat: Infinity, repeatType: "reverse", type: "tween", ease: "easeInOut" }}
+          transition={{ delay: 0.5, duration: 0.8, repeat: Infinity, repeatType: "reverse", type: "tween", ease: "linear" }}
           className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 text-zinc-500 text-sm sm:text-base whitespace-nowrap flex items-center space-x-2 cursor-pointer"
           onClick={handleContinue}
         >

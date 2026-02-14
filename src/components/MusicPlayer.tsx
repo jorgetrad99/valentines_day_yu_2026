@@ -8,7 +8,7 @@ export default function MusicPlayer() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
 
-  const embedUrl = `https://open.spotify.com/track/1HNkqx9Ahdgi1Ixy2xkKkL?si=1fc4dd1f315e4a8b`;
+  const embedUrl = `https://open.spotify.com/track/1HNkqx9Ahdgi1Ixy2xkKkL?si=53a1f18d82ed4571`;
 
   return (
     <div className="fixed bottom-6 right-6 z-[100]">

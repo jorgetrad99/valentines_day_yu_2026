@@ -126,39 +126,40 @@ export default function SlideManager() {
             initial="enter"
             animate="center"
             exit="exit"
-            transition={{ 
+            transition={{
               x: { type: "spring", stiffness: 300, damping: 30 },
               opacity: { duration: 0.2 }
             }}
             drag="x"
-            dragConstraints={constraintsRef} // Swipe constraints
-            dragElastic={1} // Makes it feel more like pulling a physical object
+            dragConstraints={constraintsRef}
+            dragElastic={1}
             onDragEnd={onSwipeEnd}
-            className="flex flex-col items-center text-center space-y-6 md:space-y-10"
+            className="grid grid-rows-[auto_minmax(0,1fr)] gap-6 md:gap-10 h-[85vh] w-full max-w-5xl mx-auto items-start"
           >
-            <div className="space-y-4 md:space-y-6">
-              <motion.h1 
+            {/* Header section with intrinsic height */}
+            <div className="space-y-4 md:space-y-6 text-center">
+              <motion.h1
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="text-5xl sm:text-6xl md:text-8xl font-serif text-valentine-red drop-shadow-sm leading-tight text-balance"
+                className="text-4xl sm:text-5xl md:text-7xl font-serif text-valentine-red drop-shadow-sm leading-tight text-balance"
               >
                 {currentSlide.title}
               </motion.h1>
               {currentSlide.subtitle && (
-                <motion.p 
+                <motion.p
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.5 }}
-                  className="text-xl sm:text-2xl md:text-3xl text-zinc-600 font-sans max-w-3xl mx-auto italic font-light text-balance break-words"
+                  className="text-lg sm:text-xl md:text-2xl text-zinc-600 font-sans max-w-3xl mx-auto italic font-light text-balance break-words"
                 >
                   {currentSlide.subtitle}
                 </motion.p>
               )}
             </div>
 
-            {/* Dynamic Content Rendering */}
-            <div className="w-full min-h-[350px] sm:min-h-[450px] flex items-center justify-center py-4 md:py-8">
+            {/* Content section that fills the remaining space */}
+            <div className="w-full h-full flex items-center justify-center overflow-hidden">
               {currentSlide.type === 'image-collage' && (
                 <Collage images={currentSlide.images} />
               )}

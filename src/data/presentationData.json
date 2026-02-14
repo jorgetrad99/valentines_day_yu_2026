@@ -2,18 +2,23 @@
   "slides": [
     {
       "id": "intro",
-      "type": "cover",
-      "title": "Nuestra Historia en 3 Años",
-      "subtitle": "Un viaje por cada momento que nos ha hecho ser quienes somos hoy.",
+      "type": "interaction",
+      "interactionType": "BookOpen",
+      "title": "Un San Valentín juntos más",
+      "subtitle": "Junto a mi amorcito :3",
       "background": "bg-zinc-950",
-      "requiresInteraction": false
+      "requiresInteraction": true,
+      "coverImage": "https://raptor.develancoders.com/api/assets/6fed6ddf-1c68-4a49-93ab-77a429995554/thumbnail?key=DCNIERzBOt9xsAZ2nmlQj-EFVlf3pada6Mob_iKe2xs16uVjduYXh5FIIutlroYKGTk&size=preview&c=0DgGHAZmJHwIpkSoyHhFsFMEaw%3D%3D&edited=true",
+      "bookTitle": "'Por la anecdota' <3",
+      "manuscriptContent": "Querido amorcito,\n\nEn este pequeño detalle te quiero expresar lo mucho que significas en mi vida y lo mucho que te amo. Intentaré hacerlo mostrandote recuerdos que atesoro en mi corazón. Sin más, espero que lo disfrutes.\n\n\nCon todo su amor,\nYorch"
     },
     {
       "id": "first-meeting",
-      "type": "text-only",
+      "type": "image-collage",
       "title": "La primera vez que te vi",
-      "subtitle": "Ese instante en el que el mundo se detuvo. No sabía que estaba viendo a la persona que cambiaría mi vida para siempre.",
+      "subtitle": "En este dia me diste la oportunidad de por fin, lugo de años de espera, cononcer a la persona más cute del mundo. No tenía claro cómo saldría nuestra cita, pero estaba emocionado :3 Así estabas con comida como siempre...",
       "background": "bg-zinc-950",
+      "images": ["https://raptor.develancoders.com/api/assets/422f063c-595d-48e5-a780-f5b8eda3e7d0/thumbnail?key=vhyHzJmK2vvPQAUceuREkfOUqs-XXWnF67hDhbhLTDJoMGHgT1S9n6MK1FPBdwXlMwQ&size=preview&c=4%2FcJDQT3aaaGaHmWeHdolhBxenf4&edited=true"],
       "requiresInteraction": false
     },
     {
@@ -22,12 +27,12 @@
       "title": "Citas sencillas, amor complejo",
       "subtitle": "Desde un helado de Dairy Queen hasta una marquesita celebrando el cumple del Bicho (CR7). Lo de menos es el lugar, lo de más eres tú.",
       "background": "bg-zinc-950",
-      "images": ["https://raptor.develancoders.com/people/8839d963-a465-4a1c-a0bd-00f712ba49aa/photos/64110976-a0d0-4fd8-90e4-38330703e5b8"],
+      "images": ["https://raptor.develancoders.com/api/assets/59dee9bf-02f3-443e-b542-045ced554c55/thumbnail?key=jhxOtC-8sHUb69vBQvXHhKJlwyMcSWgETDAklde6eowIWQktSIv6XJaklxUUBapDSgg&size=preview&c=HwgOFQLGZm%2BWiIiIiZd2h5AaJsZQ&edited=true"],
       "requiresInteraction": false
     },
     {
       "id": "will-you-be-mine",
-      "type": "text-only",
+      "type": "image-collage",
       "title": "Cuando te pedí ser mi novia",
       "subtitle": "Los nervios a flor de piel y la respuesta que me hizo el hombre más feliz del mundo.",
       "background": "bg-zinc-950",
@@ -35,7 +40,7 @@
     },
     {
       "id": "reciprocal-love",
-      "type": "text-only",
+      "type": "image-collage",
       "title": "Cuando tú me lo pediste a mí",
       "subtitle": "Un gesto que me demostró que esto era mutuo, genuino y real. Dos almas eligiéndose.",
       "background": "bg-zinc-950",
@@ -52,7 +57,7 @@
     },
     {
       "id": "graduation",
-      "type": "text-only",
+      "type": "image-collage",
       "title": "Tu graduación",
       "subtitle": "Verte alcanzar tus metas es uno de mis orgullos más grandes. Siempre estaré en primera fila para aplaudirte.",
       "background": "bg-zinc-950",
@@ -60,7 +65,7 @@
     },
     {
       "id": "music-collaboration",
-      "type": "text-only",
+      "type": "image-collage",
       "title": "Nuestra melodía",
       "subtitle": "Cuando me ayudaste a tocar esas 2 canciones... no solo eran notas, era nuestra armonía trabajando junta.",
       "background": "bg-zinc-950",
@@ -69,7 +74,7 @@
     
     {
       "id": "taco-nights",
-      "type": "text-only",
+      "type": "image-collage",
       "title": "Tacos y risas",
       "subtitle": "Nuestras cenas de tacos, nuestras caminatas sin rumbo y esas salidas espontáneas que terminan siendo las mejores.",
       "background": "bg-zinc-950",
@@ -77,7 +82,7 @@
     },
     {
       "id": "support",
-      "type": "text-only",
+      "type": "image-collage",
       "title": "Mi mayor fan",
       "subtitle": "Gracias por celebrar cada una de mis presentaciones, por sencillas que sean. Tu apoyo es mi motor.",
       "background": "bg-zinc-950",
@@ -121,7 +126,7 @@
       "id": "ending",
       "type": "final",
       "title": "Feliz San Valentín",
-      "subtitle": "Te amo más de lo que las palabras pueden expresar.",
+      "subtitle": "Te amo mucho amorcito, feliz San Valentín.",
       "background": "bg-zinc-950",
       "requiresInteraction": false
     }

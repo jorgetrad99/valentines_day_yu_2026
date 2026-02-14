@@ -8,6 +8,10 @@ interface CollageProps {
 }
 
 export default function Collage({ images = [] }: CollageProps) {
+  const isSingleImage = images.length === 1;
+  const isTwoImages = images.length === 2;
+  const isThreeImages = images.length === 3;
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -19,13 +23,12 @@ export default function Collage({ images = [] }: CollageProps) {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, scale: 0.5, rotate: -15 },
+    hidden: { opacity: 0, scale: 0.5, rotate: isSingleImage ? 0 : -15 },
     visible: {
       opacity: 1,
       scale: 1,
       rotate: 0,
-      transition: { // Explicitly define transition properties
-        type: "spring",
+      transition: {
         stiffness: 80,
         damping: 12,
       },
@@ -46,34 +49,49 @@ export default function Collage({ images = [] }: CollageProps) {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="relative w-full max-w-5xl mx-auto min-h-[500px] md:h-[600px] flex items-center justify-center p-4 md:p-8"
+      className="relative w-full h-full flex items-center justify-center overflow-hidden"
     >
-      {/* Grid Dinámico: 1 col en mobile, 2 en tablet, 3 en desktop */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 w-full relative z-10 overflow-y-auto max-h-[70vh] md:max-h-none scrollbar-hide py-10 px-4">
-        {images.map((src, i) => (
-          <motion.div
-            key={i}
-            variants={itemVariants}
-            style={{
-              rotate: (i % 2 === 0 ? 1 : -1) * (i * 2 + 2),
-            }}
-            whileHover={{ scale: 1.05, rotate: 0, zIndex: 50 }}
-            whileTap={{ scale: 0.95 }}
-            className="relative aspect-square rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white/5 bg-zinc-900 group"
-          >
-            <img
-              src={src}
-              alt={`Recuerdo ${i}`}
-              className="w-full h-full object-cover select-none grayscale group-hover:grayscale-0 transition-all duration-700"
-              loading="lazy"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-valentine-red/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center p-6">
-               <span className="text-white font-bold text-lg drop-shadow-lg text-center leading-tight">
-                {loveNotes[i % loveNotes.length]}
-               </span>
-            </div>
-          </motion.div>
-        ))}
+      <div
+        className={`w-full h-full relative z-10 flex flex-col items-center justify-center ${
+          !isSingleImage && !isTwoImages && !isThreeImages ? 'overflow-y-auto scrollbar-hide p-4' : 'p-2'
+        }`}
+      >
+        <div
+          className={`w-full h-full grid gap-4 md:gap-8 ${
+            isSingleImage
+              ? 'grid-cols-1'
+              : isTwoImages
+                ? 'grid-cols-1 md:grid-cols-2'
+                : isThreeImages
+                  ? 'grid-cols-1 md:grid-cols-3'
+                  : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
+          }`}
+        >
+          {images.map((src, i) => (
+            <motion.div
+              key={i}
+              variants={itemVariants}
+              style={{
+                rotate: isSingleImage ? 0 : (i % 2 === 0 ? 1 : -1) * (i * 2 + 2),
+              }}
+              whileHover={{ scale: 1.05, rotate: 0, zIndex: 50 }}
+              whileTap={{ scale: 0.95 }}
+              className="relative rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white/5 bg-zinc-900 group w-full h-full"
+            >
+              <img
+                src={src}
+                alt={`Recuerdo ${i}`}
+                className="w-full h-full object-contain select-none transition-all duration-700"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-valentine-red/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center p-6">
+                <span className="text-white font-bold text-lg drop-shadow-lg text-center leading-tight">
+                  {loveNotes[i % loveNotes.length]}
+                </span>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
 
       {/* Notas flotantes de fondo (ocultas en mobile muy pequeño para no saturar) */}
@@ -82,16 +100,16 @@ export default function Collage({ images = [] }: CollageProps) {
           <motion.div
             key={`note-${i}`}
             initial={{ opacity: 0, y: 100 }}
-            animate={{ 
-              opacity: [0, 0.3, 0], 
-              y: [-100, -400], 
+            animate={{
+              opacity: [0, 0.3, 0],
+              y: [-100, -400],
               x: (i % 2 === 0 ? 1 : -1) * (i * 60 + 50)
             }}
-            transition={{ 
-              duration: 8 + i, 
-              repeat: Infinity, 
+            transition={{
+              duration: 8 + i,
+              repeat: Infinity,
               delay: i * 1.5,
-              ease: "linear" 
+              ease: "linear"
             }}
             className="absolute text-valentine-pink/20 font-serif text-xl md:text-3xl whitespace-nowrap"
           >
