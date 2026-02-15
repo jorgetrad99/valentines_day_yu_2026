@@ -122,7 +122,7 @@
     },
     {
       "id": "ending",
-      "type": "final",
+      "type": "image-collage",
       "title": "Sigamos creando recuerdo bonitos juntos!",
       "subtitle": "Te amo mucho amorcito, feliz San Valentín.",
       "images": ["https://raptor.develancoders.com/api/assets/bdb942b5-6f1f-4c89-8ac9-dfd6df165b27/video/playback?key=aCqUdLkJo6lO3dpfePJ-5xrIw8ADsx6Kaw-qqBbvZzLpHecg82q7kBuDURsZXUKV6v0&c=2SgKHIaxZocgppXJqmaHoFQHeg%3D%3D"],
