@@ -128,6 +128,15 @@
       "images": ["https://raptor.develancoders.com/api/assets/bdb942b5-6f1f-4c89-8ac9-dfd6df165b27/video/playback?key=aCqUdLkJo6lO3dpfePJ-5xrIw8ADsx6Kaw-qqBbvZzLpHecg82q7kBuDURsZXUKV6v0&c=2SgKHIaxZocgppXJqmaHoFQHeg%3D%3D"],
       "background": "bg-zinc-950",
       "requiresInteraction": false
+    },
+    {
+      "id": "ending",
+      "type": "image-collage",
+      "title": "Pa' que no se nos olvide",
+      "subtitle": "jejeje te amo. El amor es como la pizza o el sandwuch de piza que hicmos hoy.",
+      "images": ["https://raptor.develancoders.com/api/assets/a572bc26-9bca-4395-a486-bac2a5e9303a/thumbnail?key=rQDTClPJVIXbNQ_ytcMKbYoK9Ywa7jFB2m83hS5zZXlvkeXUMhaBufIGVz0yQXl7rXA&size=preview&c=XfgNFQKRdoBqh3aHiWeVeJel8Nq2&edited=true", "https://raptor.develancoders.com/api/assets/f08bdc8c-4084-4b2a-b37f-7f7de921de81/thumbnail?key=Qp4V4LkeWk29bTEkPXEdfVr6hJj_QwDOnnvM6B8pV8xflWmj6fis2zM1jXR4xbjU0kM&size=preview&c=YggKFQIfS86WxbeXdYeHlalg4woj&edited=true", "https://raptor.develancoders.com/api/assets/c8668ba5-6c86-48b7-8565-33833aa75ff5/thumbnail?key=QegxhSBuUJDk1n1FZoyN6xxQdICTm9h1o56kLvmIthm_0ot_YvGntu8OC0OABje3rGA&size=preview&c=XfgJDQRrx3%2BDS2apaImoibGQA4Sc&edited=true"],
+      "background": "bg-zinc-950",
+      "requiresInteraction": false
     }
   ]
 }
